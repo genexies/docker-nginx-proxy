@@ -14,7 +14,7 @@ WORKDIR /etc/nginx
 RUN mkdir -p /var/log/nginx/
 
 RUN rm /etc/nginx/sites-enabled/default
-ADD etc/nginx/sites-enabled/proxy /etc/nginx/sites-enabled/proxy
+ADD etc/nginx/sites-enabled/* /etc/nginx/sites-enabled/
 
 ADD auxiliary_functions.sh /auxiliary_functions.sh
 ADD entrypoint.sh /entrypoint.sh
