@@ -2,7 +2,7 @@
 
 set -e
 
-source /auxiliary_functions.sh
+source /auxiliary-functions.sh
 
 if [ -z "$PROXY_PASS" ]; then
 	log ERROR 'Missing PROXY_PASS environment variable'
