@@ -16,7 +16,7 @@ RUN mkdir -p /var/log/nginx/
 RUN rm /etc/nginx/sites-enabled/default
 ADD etc/nginx/sites-enabled/* /etc/nginx/sites-enabled/
 
-ADD auxiliary_functions.sh /auxiliary_functions.sh
+ADD auxiliary-functions.sh /auxiliary-functions.sh
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod u+x /entrypoint.sh
 
