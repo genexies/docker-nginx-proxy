@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 sed_escape() {
 	echo "$@" | sed 's/[\/&]/\\&/g'
@@ -20,6 +20,6 @@ log() {
 }
 
 sudorun() {
-	sudo bash -c "$1"
+	sudo bash -c "${1}"
 }
 
