@@ -13,8 +13,10 @@ WORKDIR /etc/nginx
 
 RUN mkdir -p /var/log/nginx/
 
-ADD etc/nginx/sites-enabled/proxy /etc/nginx/sites-enabled/proxy
+RUN rm /etc/nginx/sites-enabled/default
+ADD etc/nginx/sites-enabled/* /etc/nginx/sites-enabled/
 
+ADD auxiliary-functions.sh /auxiliary-functions.sh
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod u+x /entrypoint.sh
 
